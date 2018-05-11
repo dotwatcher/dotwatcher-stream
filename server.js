@@ -18,11 +18,15 @@ const pusher = new Pusher({
   encrypted: true
 })
 
-app.post('/new-post', function (req, res) {
+app.post('/new-post', (req, res) => {
   pusher.trigger('dotwatcher', 'new-post', req.body)
   res.sendStatus(200)
 })
 
-app.listen(port, function () {
+app.get('/', (req, res) => {
+  res.send('Nothing to see here. Proceed to <a href="https://dotwatcher.cc">dotwatcher.cc</a>')
+})
+
+app.listen(port, () => {
   console.log('Node app is running at localhost:' + port)
 })

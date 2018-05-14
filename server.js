@@ -7,7 +7,7 @@ const Pusher = require('pusher')
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(bodyParser.json({type: 'application/vnd.contentful.management.v1+json'}))
 
 const port = process.env.PORT || 8080
 

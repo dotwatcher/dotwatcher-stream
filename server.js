@@ -1,3 +1,4 @@
+require('now-env');
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -19,7 +20,12 @@ const pusher = new Pusher({
 })
 
 app.post('/new-post', (req, res) => {
-  pusher.trigger('dotwatcher', 'new-post', req.body)
+  const payload = {
+    post: req.body.sys.id,
+    category: req.body.fields.category['en-US'][0].sys.id
+  }
+  console.log('Post published event received', payload)
+  pusher.trigger('dotwatcher', 'new-post', payload)
   res.sendStatus(200)
 })
 

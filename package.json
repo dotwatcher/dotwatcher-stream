@@ -1,7 +1,7 @@
 {
   "name": "dotwatcher-stream",
   "version": "1.0.0",
-  "description": "Pusher endpoint that get hit when new content is made",
+  "description": "Pusher endpoint that get poked when new content is published",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -9,12 +9,12 @@
   "author": "Jon Heslop",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "pusher": "^2.0.0"
+    "pusher": "^2.1.3"
   },
   "devDependencies": {
-    "now-env": "^3.0.4"
+    "now-env": "^3.1.0"
   }
 }

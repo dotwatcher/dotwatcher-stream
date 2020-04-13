@@ -1,8 +1,7 @@
 {
+  "version": 2,
   "name": "dotwatcher-stream",
-  "alias": [
-    "stream.dotwatcher.cc"
-  ],
+  "alias": ["stream.dotwatcher.cc"],
   "env": {
     "PUSHER_APP_ID": "@pusher-app-id",
     "PUSHER_KEY": "@pusher-key",
